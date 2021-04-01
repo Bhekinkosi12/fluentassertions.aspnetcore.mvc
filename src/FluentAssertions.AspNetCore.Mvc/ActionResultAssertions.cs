@@ -13,10 +13,7 @@ namespace FluentAssertions.AspNetCore.Mvc
     {
         #region Public Constructors
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ActionResultAssertions" /> class.
-        /// </summary>
-        public ActionResultAssertions(IActionResult subject) : base(subject)
+       public ActionResultAssertions(IActionResult subject) : base(subject)
         {
             Subject = subject;
         }
@@ -54,17 +51,7 @@ namespace FluentAssertions.AspNetCore.Mvc
             return new ContentResultAssertions(Subject as ContentResult);
         }
 
-        /// <summary>
-        /// Asserts that the subject is an <see cref="EmptyResult"/>.
-        /// </summary>
-        /// <param name="reason">
-        /// A formatted phrase as is supported by <see cref="string.Format(string,object[])" /> explaining why the assertion
-        /// is needed. If the phrase does not start with the word <i>because</i>, it is prepended automatically.
-        /// </param>
-        /// <param name="reasonArgs">
-        /// Zero or more objects to format using the placeholders in <paramref name="reason"/>.
-        /// </param>
-        [CustomAssertion]
+          [CustomAssertion]
         public EmptyResult BeEmptyResult(string reason = "", params object[] reasonArgs)
         {
             Execute.Assertion
